@@ -40,7 +40,7 @@ end
 
 def pede_um_chute
     puts "Entre com uma letra ou uma palavra: "
-    chute = gets.strip
+    chute = gets.strip.downcase
     chute
 end
 
