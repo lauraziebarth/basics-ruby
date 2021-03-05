@@ -1,4 +1,5 @@
 require_relative "ui"
+require_relative "rank"
 
 def sorteia_palavra_secreta
     avisa_escolhendo_palavra 
@@ -83,13 +84,23 @@ def joga(nome)
     end
 
     avisa_pontos pontos_ate_agora
+    pontos_ate_agora
 end
 
 def jogo_da_forca
     nome = da_boas_vindas
+    pontos_totais = 0
 
-    loop do 
-        joga nome
+    avisa_campeao_atual le_rank
+
+    loop do
+        pontos_totais += joga nome
+        avisa_pontos_totais pontos_totais
+
+        if le_rank[1].to_i < pontos_totais
+            salva_rank nome, pontos_totais
+        end
+
         break if nao_quer_jogar?
     end
 end
