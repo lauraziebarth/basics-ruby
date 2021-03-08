@@ -6,4 +6,4 @@ Neste step foi desenvolvido 3 jogos diferentes, para aprender a sintaxe e os pri
 
 - [x] Primeiro jogo: `jogo_maior_ou_menor.rb`
 - [x] Segundo jogo: `jogo_da_forca`
-- [ ] Terceiro jogo: --
+- [x] Terceiro jogo: `jogo-foge-foge`
